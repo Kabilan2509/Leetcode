@@ -6,7 +6,8 @@ class Solution {
         for (int right = 0; right < nums.length; right++) {
             hmap.put(nums[right], hmap.getOrDefault(nums[right], 0) + 1);
             while (hmap.get(nums[right]) > k) {
-                hmap.put(nums[left], hmap.get(nums[left]) - 1);
+                int value = nums[left];
+                hmap.put(value, hmap.get(value) - 1);
                 left++;
             }
             ans = Math.max(ans, right - left + 1);
