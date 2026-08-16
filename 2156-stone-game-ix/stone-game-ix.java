@@ -5,9 +5,12 @@ class Solution {
         int ones = 0;
         int twos = 0;
         for (int i : stones) {
-            if(i % 3 == 0) zero++;
-            else if(i % 3 == 1) ones++;
-            else twos++;
+            if (i % 3 == 0)
+                zero++;
+            else if (i % 3 == 1)
+                ones++;
+            else
+                twos++;
         }
         if (zero % 2 == 0 && ones > 0 && twos > 0) {
             return true;
