@@ -1,7 +1,7 @@
 class Solution {
     public int[] resultArray(int[] nums) {
-        List<Integer> l1 = new ArrayList<>();
-        List<Integer> l2 = new ArrayList<>();
+        ArrayList<Integer> l1 = new ArrayList<>();
+        ArrayList<Integer> l2 = new ArrayList<>();
         int n = nums.length;
         l1.add(nums[0]);
         l2.add(nums[1]);
