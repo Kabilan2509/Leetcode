@@ -1,6 +1,6 @@
 class Solution {
     public int missingMultiple(int[] nums, int k) {
-        int[] freq = new int[10001];
+        int[] freq = new int[1001];
         int maxx = Integer.MIN_VALUE;
         for(int i : nums){
             freq[i]++;
