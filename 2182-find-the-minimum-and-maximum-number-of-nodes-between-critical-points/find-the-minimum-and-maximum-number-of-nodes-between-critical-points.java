@@ -10,7 +10,6 @@
  */
 class Solution {
     private int[] check(ListNode head) {
-        ListNode temp = head;
         int c = 0;
         int prev = Integer.MIN_VALUE;
         ArrayList<Integer> l = new ArrayList<>();
@@ -38,7 +37,7 @@ class Solution {
         if (minn == Integer.MAX_VALUE && maxx == Integer.MIN_VALUE) {
             return new int[] { -1, -1 };
         }
-        return new int[] { minn, Math.abs(l.get(l.size() - 1) - l.get(0)) };
+        return new int[] { minn, l.get(l.size() - 1) - l.get(0) };
     }
 
     public int[] nodesBetweenCriticalPoints(ListNode head) {
