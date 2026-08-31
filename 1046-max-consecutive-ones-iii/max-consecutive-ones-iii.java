@@ -10,9 +10,7 @@ class Solution {
                 freq[nums[left]]--;
                 left++;
             }
-            if(freq[0] <= k){
-                ans = Math.max(ans,right - left + 1);
-            }
+            ans = Math.max(ans,right - left + 1);
         }
         return ans;
     }
