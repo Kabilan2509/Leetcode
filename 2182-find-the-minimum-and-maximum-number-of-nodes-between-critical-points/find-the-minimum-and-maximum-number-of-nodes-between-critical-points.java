@@ -32,10 +32,9 @@ class Solution {
         }
         int minn = Integer.MAX_VALUE;
         int maxx = Integer.MIN_VALUE;
-        Collections.sort(l);
+        //Collections.sort(l);
         for(int i = 0; i < l.size() - 1; i++){
             minn = Math.min(minn,Math.abs(l.get(i) - l.get(i+1)));
-            // maxx = Math.max(maxx,Math.abs(l.get(i) - l.get(i+1)));
         }
         System.out.println(l.toString());
         if(minn == Integer.MAX_VALUE && maxx == Integer.MIN_VALUE){
