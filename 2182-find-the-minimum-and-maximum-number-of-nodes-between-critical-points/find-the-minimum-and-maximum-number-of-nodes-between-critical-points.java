@@ -33,7 +33,7 @@ class Solution {
         for (int i = 0; i < l.size() - 1; i++) {
             minn = Math.min(minn, Math.abs(l.get(i) - l.get(i + 1)));
         }
-        System.out.println(l.toString());
+        //System.out.println(l.toString());
         if (minn == Integer.MAX_VALUE && maxx == Integer.MIN_VALUE) {
             return new int[] { -1, -1 };
         }
