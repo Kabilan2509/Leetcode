@@ -1,13 +1,14 @@
 class Solution {
     public boolean uniformArray(int[] nums1) {
-        int minn_o = Integer.MAX_VALUE;
+        int minn = Integer.MAX_VALUE;
         for (int i : nums1) {
-            if (i % 2 != 0) {
-                minn_o = Math.min(minn_o, i);
-            }
+            minn = Math.min(minn, i);
+        }
+        if(minn % 2 == 1){
+            return true;
         }
         for (int i : nums1) {
-            if (i % 2 == 0 && i < minn_o && minn_o != Integer.MAX_VALUE) {
+            if(i % 2 == 1){
                 return false;
             }
         }
