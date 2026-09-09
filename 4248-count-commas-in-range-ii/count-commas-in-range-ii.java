@@ -3,9 +3,6 @@ class Solution {
         long tot = 0;
         for (long i = 1000; i <= n; i *= 1000) {
             tot += (n - i + 1);
-            if (i > Long.MAX_VALUE / 1000) {
-                break;
-            }
         }
         return tot;
     }
