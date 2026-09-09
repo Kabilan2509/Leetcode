@@ -1,6 +1,6 @@
 class Solution {
     private int fibb(int n, int[] dp) {
-        if (n <= 2) {
+        if (n <= 3) {
             return n;
         }
         if (dp[n] != 0) {
