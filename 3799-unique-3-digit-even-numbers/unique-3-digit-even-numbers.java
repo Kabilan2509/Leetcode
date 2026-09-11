@@ -2,8 +2,9 @@ class Solution {
     public int totalNumbers(int[] digits) {
         Map<Integer, Integer> hmap = new HashMap<>();
         List<Integer> l = new ArrayList<>();
+        int[] fre = new int[10];
         for (int d : digits) {
-            hmap.put(d, hmap.getOrDefault(d, 0) + 1);
+            fre[d]++;
         }
         for (int i = 100; i < 1000; i += 2) {
             Map<Integer, Integer> freq = new HashMap<>();
@@ -15,7 +16,7 @@ class Solution {
             }
             boolean flag = true;
             for (Map.Entry<Integer, Integer> entry : freq.entrySet()) {
-                if (hmap.getOrDefault(entry.getKey(), 0) < entry.getValue()) {
+                if (fre[entry.getKey()] < entry.getValue()) {
                     flag = false;
                     break;
                 }
