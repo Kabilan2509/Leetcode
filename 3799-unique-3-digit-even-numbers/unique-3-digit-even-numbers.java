@@ -7,16 +7,16 @@ class Solution {
             fre[d]++;
         }
         for (int i = 100; i < 1000; i += 2) {
-            Map<Integer, Integer> freq = new HashMap<>();
+            int[] freq = new int[10];
             int num = i;
             while (num > 0) {
                 int d = num % 10;
-                freq.put(d, freq.getOrDefault(d, 0) + 1);
+                freq[d]++;
                 num /= 10;
             }
             boolean flag = true;
-            for (Map.Entry<Integer, Integer> entry : freq.entrySet()) {
-                if (fre[entry.getKey()] < entry.getValue()) {
+            for (int k = 0; k < 10; k++) {
+                if (fre[k] < freq[k]) {
                     flag = false;
                     break;
                 }
