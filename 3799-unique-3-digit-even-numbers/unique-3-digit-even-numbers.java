@@ -10,17 +10,17 @@ class Solution {
             int num = i;
             while (num > 0) {
                 int d = num % 10;
-                freq.put(d,freq.getOrDefault(d,0) + 1);
+                freq.put(d, freq.getOrDefault(d, 0) + 1);
                 num /= 10;
             }
             boolean flag = true;
-            for(Map.Entry<Integer,Integer> entry : freq.entrySet()){
-                if(hmap.getOrDefault(entry.getKey() , 0) < entry.getValue()){
+            for (Map.Entry<Integer, Integer> entry : freq.entrySet()) {
+                if (hmap.getOrDefault(entry.getKey(), 0) < entry.getValue()) {
                     flag = false;
                     break;
                 }
             }
-            if(flag){
+            if (flag) {
                 l.add(i);
             }
         }
