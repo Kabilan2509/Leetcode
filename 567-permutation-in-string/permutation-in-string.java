@@ -8,11 +8,12 @@ class Solution {
         int l = 0;
         int n = s2.length();
         int r = 0;
+        int k = s1.length();
         while(r < n){
             if(Arrays.equals(freq1,freq2)){
                 return true;
             }
-            if(r - l + 1 > s1.length()){
+            if(r - l + 1 > k){
                 freq2[s2.charAt(l) - 'a']--;
                 l++;
             }
