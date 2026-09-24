@@ -10,9 +10,8 @@ class Solution {
 
     public int smallestIndex(int[] nums) {
         int[] dp = new int[1001];
-        Arrays.fill(dp,-1);
         for (int i = 0; i < nums.length; i++) {
-            if (dp[nums[i]] == -1) {
+            if(dp[nums[i]] == 0){
                 dp[nums[i]] = sum(nums[i]);
             }
             if(dp[nums[i]] == i){
