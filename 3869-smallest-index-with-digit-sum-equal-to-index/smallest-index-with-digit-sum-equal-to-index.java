@@ -13,7 +13,7 @@ class Solution {
         for (int i = 0; i < nums.length; i++) {
             int n = nums[i];
             if(dp[n] == 0){
-                dp[n] = sum(nums[i]);
+                dp[n] = sum(n);
             }
             if(dp[n] == i){
                 return i;
