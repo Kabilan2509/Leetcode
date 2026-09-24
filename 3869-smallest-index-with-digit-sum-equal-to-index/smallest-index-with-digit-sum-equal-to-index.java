@@ -11,10 +11,11 @@ class Solution {
     public int smallestIndex(int[] nums) {
         int[] dp = new int[1001];
         for (int i = 0; i < nums.length; i++) {
-            if(dp[nums[i]] == 0){
-                dp[nums[i]] = sum(nums[i]);
+            int n = nums[i];
+            if(dp[n] == 0){
+                dp[n] = sum(nums[i]);
             }
-            if(dp[nums[i]] == i){
+            if(dp[n] == i){
                 return i;
             }
         }
