@@ -1,7 +1,6 @@
 class Solution {
     public int countTriplets(int[] arr) {
         int a = 0;
-        int b = 0;
         int n = arr.length;
         int ans = 0;
         for(int i = 0; i < n; i++){
