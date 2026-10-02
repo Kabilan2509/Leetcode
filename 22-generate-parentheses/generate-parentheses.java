@@ -1,19 +1,22 @@
 class Solution {
-    private void solve(int open, int close, int n, String current, List<String> ans){
+    private void solve(int open, int close, int pos, int n, char[] current, List<String> ans){
         if(open == n && close == n){
-            ans.add(current);
+            ans.add(new String(current));
             return;
         }
         if(open < n){
-            solve(open + 1,close,n,current + "(",ans);
+            current[pos] = '(';
+            solve(open + 1,close,pos + 1,n,current,ans);
         }
         if(close < open){
-            solve(open,close + 1,n,current + ")",ans);
+            current[pos] = ')';
+            solve(open,close + 1,pos + 1,n,current,ans);
         }
     }
     public List<String> generateParenthesis(int n) {
         List<String> ans = new ArrayList<>();
-        solve(0, 0, n, "", ans);
+        char[] s = new char[2 * n];
+        solve(0, 0, 0, n, s, ans);
         return ans;
     }
 }
